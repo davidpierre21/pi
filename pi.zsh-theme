@@ -1,8 +1,10 @@
-PROMPT=' ${return_status} %{$fg[blue]%}$(get_pwd)%{$reset_color%} $(git_prompt_info)${prompt_suffix}'
+PROMPT=' ${return_status} %{$fg[blue]%}$(get_pwd)%{$reset_color%} $(git_prompt_info)${new_line} ${prompt_suffix}'
 
 local return_status="%(?:%{$fg_bold[green]%}π:%{$fg_bold[red]%}π)"
 
 local prompt_suffix="%{$fg[magenta]%}❯%{$reset_color%} "
+
+local new_line=$'\n'
 
 # by shashankmehta (https://github.com/shashankmehta)
 function get_pwd(){
